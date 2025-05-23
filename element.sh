@@ -19,3 +19,5 @@ else
   SEARCH_BY="name"
 fi
 
+RESULT=$($PSQL "SELECT atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, symbol, name FROM properties INNER JOIN elements USING(atomic_number)")
+
